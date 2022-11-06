@@ -21,9 +21,7 @@ io.on("connection", s => {
   s.on("play", msg => {
     if (msg.length == 2) {
       if (checkUUID(msg[0])) {
-        if (!isNaN(msg[1])) {
-          s.broadcast.emit("play-seed", msg);
-        }
+        s.broadcast.emit("play-seed", msg);
       }
     }
   });
