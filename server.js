@@ -19,7 +19,7 @@ const checkUUID = (uuid) => {
 
 io.on("connection", s => {
   s.on("play", msg => {
-    if (msg.length == 2) {
+    if (msg.length == 2 || msg.length == 3) {
       if (checkUUID(msg[0])) {
         s.broadcast.emit("play-seed", msg);
       }
