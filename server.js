@@ -25,6 +25,11 @@ io.on("connection", s => {
       }
     }
   });
+  s.on("race", msg => {
+    if (msg.length == 2) {
+      s.broadcast.emit("race-seed", msg);
+    }
+  });
 });
 
 setInterval(() => fetch("https://salty-wave-05504.herokuapp.com/"), 250000)
