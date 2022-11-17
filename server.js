@@ -26,7 +26,7 @@ io.on("connection", s => {
     }
   });
   s.on("race", msg => {
-    if (msg.length == 2) {
+    if (msg.length == 3) {
       s.broadcast.emit("race-seed", msg);
     }
   });
