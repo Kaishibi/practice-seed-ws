@@ -31,5 +31,3 @@ io.on("connection", s => {
     }
   });
 });
-
-setInterval(() => fetch("https://salty-wave-05504.herokuapp.com/"), 250000)
